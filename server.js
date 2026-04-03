@@ -285,10 +285,11 @@ app.post("/api/sessions/:id/steps/:index/context-summary", async (req, res) => {
   }
 });
 
-app.use(express.static(path.join(__dirname, "public")));
+const clientDist = path.join(__dirname, "client", "dist");
+app.use(express.static(clientDist));
 
 app.get("*", (_req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(clientDist, "index.html"));
 });
 
 const port = Number.parseInt(process.env.PORT || "3000", 10);
