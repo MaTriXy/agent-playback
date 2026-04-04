@@ -1,4 +1,4 @@
-# Playback
+# Playback 📼
 
 Playback turns raw agent session logs into a clear, step‑by‑step timeline so you can see what the user asked, what the agent did, which tools ran, and how the session progressed.
 
